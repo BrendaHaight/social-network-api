@@ -9,10 +9,10 @@ This project is a RESTful API for a social network web application where users c
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Routes](#api-routes)
-  - [User Routes](#user-routes)
-  - [Thought Routes](#thought-routes)
-  - [Reaction Routes](#reaction-routes)
-  - [Friend Routes](#friend-routes)
+- [User Routes](#user-routes)
+- [Thought Routes](#thought-routes)
+- [Reaction Routes](#reaction-routes)
+- [Friend Routes](#friend-routes)
 - [Walkthrough Video](#walkthrough-video)
 - [License](#license)
 
@@ -149,9 +149,9 @@ npm run dev
 - **Remove a Friend from a User's Friend List**
   - DELETE `/api/users/:userId/friends/:friendId`
 
-### Walkthrough Video\*\*
+### Walkthrough Video
 
-For a detailed walkthrough of the API functionality, please refer to the following video link: ![Walkthrough Video](https://drive.google.com/file/d/1dz8CzKYPRQ3uSwZge0FQY71RsGaDYf0X/view?usp=sharing)
+For a detailed walkthrough of the API functionality, please refer to the following video link: [Walkthrough Video](https://drive.google.com/file/d/1dz8CzKYPRQ3uSwZge0FQY71RsGaDYf0X/view?usp=sharing)
 
 ## License
 

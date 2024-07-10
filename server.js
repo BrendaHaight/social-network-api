@@ -4,6 +4,8 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+require("dotenv").config();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -12,11 +14,7 @@ app.use("/api", routes);
 
 // Connect to MongoDB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/socialNetworkDB",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
+  process.env.MONGODB_URI || "mongodb://localhost/socialNetworkDB"
 );
 
 mongoose.connection.once("open", () => {

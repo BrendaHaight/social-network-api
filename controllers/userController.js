@@ -1,6 +1,7 @@
 const { User, Thought } = require("../models");
 
 module.exports = {
+  // Get all users
   async getUsers(req, res) {
     try {
       const users = await User.find().populate("thoughts").populate("friends");
@@ -36,7 +37,7 @@ module.exports = {
   },
 
   // Update a user by its ID
-  async dupdateUser(req, res) {
+  async updateUser(req, res) {
     try {
       const user = await User.findOneAndUpdate(
         { _id: req.params.userId },
@@ -62,7 +63,7 @@ module.exports = {
         return res.status(404).json({ message: "No user found with that ID" });
       }
       await Thought.deleteMany({ _id: { $in: user.thoughts } });
-      res.json({ message: "User and associated thoughts deleted" });
+      res.json({ message: "User and associated thoughts deleted!" });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -102,6 +103,7 @@ module.exports = {
       }
       res.json(user);
     } catch (err) {
+      console.error("Error fetching users:", err);
       res.status(500).json(err);
     }
   },

@@ -97,6 +97,7 @@ module.exports = {
       }
       res.json(thought);
     } catch (err) {
+      console.error("Error adding reaction:", err);
       res.status(500).json(err);
     }
   },
@@ -116,6 +117,7 @@ module.exports = {
       }
       res.json(thought);
     } catch (err) {
+      console.error("Error removing reaction:", err);
       res.status(500).json(err);
     }
   },
